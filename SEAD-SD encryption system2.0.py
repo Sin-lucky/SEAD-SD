@@ -42,10 +42,10 @@ def re_ks(a,b,c):#a is text to decrypt, b is key
     times=0
     awnser=''#create variable to save answer
     for times in range(wide):
-        if c == 1:
-            tip=chr(ord(a[times:times+1])+key)
-        elif c == 0:
+        if c == 0:
             tip=chr(ord(a[times:times+1])-key)
+        elif c == 1:
+            tip=chr(ord(a[times:times+1])+key)
         awnser+=tip
         times+=1
     return awnser#Decryption Caesar encryption
